@@ -28,8 +28,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-sys.path.append('/home/ignisor/dev/CarsDataBase/CarsScrapper')
-os.environ['SCRAPY_SETTINGS_MODULE'] = 'CarsScrapper.settings'
+sys.path.append('/home/ignisor/dev/CarsDataBase/cars_scrapper')
+os.environ['SCRAPY_SETTINGS_MODULE'] = 'cars_scrapper.settings'
 
 # Application definition
 

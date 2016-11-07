@@ -18,10 +18,10 @@ sys.path.append('/home/ignisor/dev/CarsDataBase/CarsWeb')
 os.environ['DJANGO_SETTINGS_MODULE'] = 'CarsWeb.settings'
 django.setup()
 
-BOT_NAME = 'CarsScrapper'
+BOT_NAME = 'cars_scrapper'
 
-SPIDER_MODULES = ['CarsScrapper.spiders']
-NEWSPIDER_MODULE = 'CarsScrapper.spiders'
+SPIDER_MODULES = ['cars_scrapper.spiders']
+NEWSPIDER_MODULE = 'cars_scrapper.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
