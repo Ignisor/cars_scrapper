@@ -19,6 +19,7 @@ class CarType(models.Model):
 
 class Car(models.Model):
     name = models.CharField(max_length=128)
+    url = models.CharField(max_length=512)
     car_type = models.ForeignKey(CarType)
 
 

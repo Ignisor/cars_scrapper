@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for CarsScrapper project
+# Scrapy settings for cars_scrapper project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -14,8 +14,8 @@ import os
 import django
 
 
-sys.path.append('/home/ignisor/dev/CarsDataBase/CarsWeb')
-os.environ['DJANGO_SETTINGS_MODULE'] = 'CarsWeb.settings'
+sys.path.append('/home/ignisor/dev/CarsDataBase/cars_web')
+os.environ['DJANGO_SETTINGS_MODULE'] = 'cars_web.settings'
 django.setup()
 
 BOT_NAME = 'cars_scrapper'
@@ -25,7 +25,7 @@ NEWSPIDER_MODULE = 'cars_scrapper.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'CarsScrapper (+http://www.yourdomain.com)'
+#USER_AGENT = 'cars_scrapper (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -56,13 +56,13 @@ DOWNLOAD_DELAY = 1
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'CarsScrapper.middlewares.MyCustomSpiderMiddleware': 543,
+#    'cars_scrapper.middlewares.MyCustomSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'CarsScrapper.middlewares.MyCustomDownloaderMiddleware': 543,
+#    'cars_scrapper.middlewares.MyCustomDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -74,7 +74,7 @@ DOWNLOAD_DELAY = 1
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'CarsScrapper.pipelines.SomePipeline': 300,
+#    'cars_scrapper.pipelines.SomePipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
