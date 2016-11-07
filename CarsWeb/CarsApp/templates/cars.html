@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars list</title>
+</head>
+<body>
+{% if cars_list %}
+    <ul>
+    {% for car in cars_list %}
+        <li><a href="{{car.name}}/">{{ car.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No cars in database.</p>
+{% endif %}
+</body>
+</html>

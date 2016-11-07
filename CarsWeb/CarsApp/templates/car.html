@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{car_name}}</title>
+</head>
+<body>
+{% if car %}
+    <h1>{{car.name}}</h1>
+    {% for category in car.specificationcategory_set.all %}
+        <h2>{{category.name}}:</h2>
+        <ul>
+        {% for spec in category.specification_set.all %}
+            <li>{{spec.key}}: {{spec.value}}</li>
+        {% endfor %}
+        </ul>
+    {% endfor %}
+{% else %}
+    <p>Error. No car found.</p>
+{% endif %}
+</body>
+</html>
