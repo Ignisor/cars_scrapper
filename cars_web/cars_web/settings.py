@@ -28,8 +28,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-sys.path.append('/home/ignisor/dev/CarsDataBase/CarsScrapper')
-os.environ['SCRAPY_SETTINGS_MODULE'] = 'CarsScrapper.settings'
+sys.path.append('/home/ignisor/dev/CarsDataBase/cars_scrapper')
+os.environ['SCRAPY_SETTINGS_MODULE'] = 'cars_scrapper.settings'
 
 # Application definition
 
@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'CarsApp',
+    'cars_app',
 ]
 
 MIDDLEWARE = [
@@ -53,7 +53,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'CarsWeb.urls'
+ROOT_URLCONF = 'cars_web.urls'
 
 TEMPLATES = [
     {
@@ -71,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'CarsWeb.wsgi.application'
+WSGI_APPLICATION = 'cars_web.wsgi.application'
 
 
 # Database

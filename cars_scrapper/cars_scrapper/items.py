@@ -7,7 +7,7 @@
 
 import scrapy
 from scrapy_djangoitem import DjangoItem
-from CarsApp.models import Brand, CarModel, CarType, Car, Specification, SpecificationCategory
+from cars_app.models import Brand, CarModel, CarType, Car, Specification, SpecificationCategory
 
 
 class BrandItem(DjangoItem):
