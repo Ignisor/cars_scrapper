@@ -18,8 +18,8 @@ class ExampleSpider(BaseSpider):
         brands_urls = response.css('div.models > div.col-2.center > a::attr(href)').extract()
         brands_names = response.css('div.models > div.col-2.center > a::attr(title)').extract()
 
-        # scrap only 4 first brands, ignore
-        for i in [0, 2, 3]:
+        # scrap brands
+        for i in range(0, len(brands_urls)):
             # parse models of the brand from urls
             request = scrapy.Request(brands_urls[i], callback = self.parse_models, dont_filter = True)
 
