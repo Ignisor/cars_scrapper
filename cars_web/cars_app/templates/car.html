@@ -7,10 +7,10 @@
 <body>
 {% if car %}
     <h1>{{car.name}}</h1>
-    {% for category in car.specificationcategory_set.all %}
+    {% for category in car.categories.all %}
         <h2>{{category.name}}:</h2>
         <ul>
-        {% for spec in category.specification_set.all %}
+        {% for spec in category.specifications.all %}
             <li>{{spec.key}}: {{spec.value}}</li>
         {% endfor %}
         </ul>

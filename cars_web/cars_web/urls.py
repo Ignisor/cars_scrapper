@@ -15,8 +15,22 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from rest_framework import routers
+from cars_app import views
+
+
+router = routers.SimpleRouter()
+router.register(r'api/brands', views.BrandViewSet)
+router.register(r'api/car_models', views.CarModelViewSet)
+router.register(r'api/car_types', views.CarTypeViewSet)
+router.register(r'api/cars', views.CarViewSet)
+router.register(r'api/specification_categories', views.SpecificationCategoryViewSet)
+router.register(r'api/specifications', views.SpecificationViewSet)
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^', include('cars_app.urls')),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]
+
+urlpatterns += router.urls
+urlpatterns += [url(r'^', include('cars_app.urls')),]
